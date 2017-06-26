@@ -1,0 +1,31 @@
+.item {
+  background: $item-bg;
+  border: 1px solid $item-border;
+  margin-bottom: $space;
+  padding: $space;
+}
+
+
+.item__message {
+  color: $item-text-color;
+
+}
+
+.item__status-message {
+  color: $item-text-color;
+
+  text-align: center;
+  margin: 0;
+}
+
+.item__food-item {
+  font-style: italic;
+  text-align: center;
+}
+
+
+.item__food-item-dis {
+  display: inline-flex;
+  float: right;
+  clear: right;
+}
