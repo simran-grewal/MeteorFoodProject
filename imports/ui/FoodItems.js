@@ -32,7 +32,7 @@ export default class FoodItems extends React.Component {
     var {categories} = this.state;
       if(categories.length == 0){
         return (
-          <div className = "item">
+          <div className = "item item__content item__no--item">
           <p className = "item__status-message">No Category is Added Yet</p>
           </div>
         )
@@ -45,6 +45,12 @@ export default class FoodItems extends React.Component {
   render() {
     return (
       <div>
+
+          <div className = "item item__content">
+            <h1>Search for Food</h1>
+            <input type = "text" placeholder = "Search Food Item"/>
+          </div>
+
         <FlipMove maintainContainerHeight = {true}>
         {this.renderCategoriesList()}
       </FlipMove>

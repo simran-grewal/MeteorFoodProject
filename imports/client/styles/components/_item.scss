@@ -18,14 +18,31 @@
   margin: 0;
 }
 
-.item__food-item {
-  font-style: italic;
-  text-align: center;
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+
+.list-group-image {
+  margin: 0;
+}
+
+.item__grid {
+  float: left;
+  margin-left: 5.7rem;
+  margin-top: 3rem;
 }
 
 
-.item__food-item-dis {
-  display: inline-flex;
-  float: right;
-  clear: right;
+.item__search {
+  text-align:justify;
+}
+
+.item__content{
+  margin: auto;
+  max-width: $site-max-width;
+}
+
+.item__no--item {
+  margin-top: 3rem;
 }

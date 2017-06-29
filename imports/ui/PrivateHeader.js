@@ -19,9 +19,6 @@ export default class PrivateHeader extends React.Component {
       <h1 className = "header__title">{this.props.title}</h1>
     );
   }
- handleChange() {
-    console.log('yoyo')
-  }
 
 render(){
   return (
@@ -29,12 +26,7 @@ render(){
       <div className = "header__content">
         {this.renderTitle()}
         <button className = "button button--link-text" onClick = {this.onLogout.bind(this)}>Logout</button>
-          <select
-
-           onChange={this.handleChange.bind(this)}>
-          <option value="Orange">Add Category</option>
-           <option value="Radish">Add Item</option>
-         </select>
+        
       </div>
   </div>
   );

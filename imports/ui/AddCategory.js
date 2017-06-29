@@ -40,10 +40,11 @@ export default class AddCategory extends React.Component {
   }
   render() {
     return (
-      <div className = "item">
+      <div className = "item item__content">
         <h1>Add your Category</h1>
         {this.renderError()}
         <form onSubmit = {this.addCategory.bind(this)}>
+
           <input type = "text" ref = "catName" placeholder = "Category Name"/>
           <button className = 'button'>Add Category</button>
         </form>

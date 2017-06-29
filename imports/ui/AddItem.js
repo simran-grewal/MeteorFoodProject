@@ -54,7 +54,7 @@ export default class AddItem extends React.Component {
 
   render () {
     return (
-      <div className = "item">
+      <div className = "item item__content">
         <h1>Add your Item</h1>
         {this.renderError()}
         <form onSubmit = {this.addItem.bind(this)}>
@@ -65,7 +65,6 @@ export default class AddItem extends React.Component {
           <img src = "https://www.w3schools.com/howto/img_forest.jpg" alt = "image" className = "img-border"/><br/>
           <button className = "button button--form">Add Item</button>
         </form>
-
       </div>
     )
   }
