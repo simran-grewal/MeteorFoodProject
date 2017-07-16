@@ -5,7 +5,7 @@ export const Items = new Mongo.Collection('items');
 
 
 Meteor.methods({
-  'item.insert'(itemName, itemPrice, itemSize, itemDescription) {
+  'item.insert'(itemName, itemPrice, itemSize, itemDescription, itemImage) {
     if(!this.userId) {
       throw new Meteor.Error('not-authorized');
     }
@@ -34,9 +34,14 @@ Meteor.methods({
         type: String,
         label: 'Your Description',
         required: false
+      },
+      itemImage: {
+        type: String,
+        label: 'Your Url',
+        regEx: SimpleSchema.RegEx.Url
       }
-    }).validate({ itemName, itemPrice, itemSize, itemDescription });
+    }).validate({ itemName, itemPrice, itemSize, itemDescription, itemImage});
 
-    Items.insert({itemName, itemPrice, itemSize, itemDescription });
+    Items.insert({itemName, itemPrice, itemSize, itemDescription, itemImage});
   }
 })

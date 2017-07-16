@@ -20,8 +20,8 @@ export default class AddItem extends React.Component {
     var itemPrice = parseInt(this.refs.itemPrice.value);
     var itemSize = this.refs.itemSize.value;
     var itemDescription = this.refs.itemDescription.value;
-
-    Meteor.call('item.insert', itemName, itemPrice, itemSize, itemDescription, (err, res) => {
+    var itemImage = this.refs.itemImage.value;
+    Meteor.call('item.insert', itemName, itemPrice, itemSize, itemDescription, itemImage, (err, res) => {
       if(err) {
         console.log(typeof itemPrice);
         this.setState({
@@ -36,6 +36,7 @@ export default class AddItem extends React.Component {
         this.refs.itemName.value = '';
         this.refs.itemDescription.value = '';
         this.refs.itemPrice.value = '';
+        this.refs.itemImage.value = '';
       }
     })
   }
@@ -62,7 +63,7 @@ export default class AddItem extends React.Component {
           <input type = "text" placeholder = "Item Price" ref = "itemPrice"/><br/>
           <input type = "text" placeholder = "Item Size" ref = "itemSize"/><br/>
           <textarea rows="4" cols="30" placeholder = "description" ref = "itemDescription"></textarea><br/>
-          <img src = "https://www.w3schools.com/howto/img_forest.jpg" alt = "image" className = "img-border"/><br/>
+          <input type = "text" placeholder = "Put Image URL here" ref = "itemImage"/><br/>
           <button className = "button button--form">Add Item</button>
         </form>
       </div>
